@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>PGBQ Travel</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"> 
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">               
+    <link rel="stylesheet" href="css/bootstrap.min.css">                               
+    <link rel="stylesheet" type="text/css" href="css/datepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/templatemo-style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .fa {
+          padding: 10px;
+          font-size: 25px;
+          width: 50px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 2px;
+        }
+        
+        .fa:hover {
+            opacity: 0.7;
+        }
+        hr.line {
+         border: 2px solid #69c6ba;
+         border-radius: 1px;
+        }
+        
+
+</style>                                 
+
+      </head>
+
+      <body>
+        <div class="tm-main-content" id="top">
+            <div class="tm-top-bar-bg"></div>    
+            <div class="tm-top-bar" id="tm-top-bar">
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar navbar-expand-lg narbar-light">
+                            <a class="navbar-brand mr-auto" href="#">
+                                <img src="img/logo.png" alt="Site logo">
+                                PGBQ Travel
+                            </a>
+                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                                <ul class="navbar-nav ml-auto">
+                                  <li class="nav-item">
+                                    <a class="nav-link active" href="#top">Trang chủ <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tm-section-2">Top những điểm đến</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tm-section-3">Danh sách tour</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tm-section-4">Khách Sạn</a>
+                                </li>
+
+                            </ul>
+                        </div>                            
+                    </nav>
+                </div>
+            </div> 
+        </div> 
+
+        <div class="tm-page-wrap mx-auto">
+            <section class="tm-banner">
+                <div class="tm-container-outer tm-banner-bg">
+                    <div class="container">
+
+                        <div class="row tm-banner-row tm-banner-row-header">
+                            <div class="col-xs-12">
+                                <div class="tm-banner-header">
+                                    <h1 class="text-uppercase tm-banner-title">Khám phá Việt Nam</h1>
+                                    <img src="img/dots-3.png" alt="Dots">
+                                    <p class="tm-banner-subtitle">Chúng tôi hỗ trợ bạn có những sự lựa chọn tốt nhất</p>
+                                    <a href="javascript:void(0)" class="tm-down-arrow-link"><i class="fa fa-2x fa-angle-down tm-down-arrow"></i></a>       
+                                </div>    
+                            </div>                     
+                        </div> 
+                        <div class="row tm-banner-row" id="tm-section-search">
+
+                            <form action="index.html" method="get" class="tm-search-form tm-section-pad-2">
+                                <div class="form-row tm-search-form-row">                                
+                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
+                                        <label for="inputCity">Lựa chọn điểm đến</label>
+                                        <input name="destination" type="text" class="form-control" id="inputCity" placeholder="Nhập nơi muốn đến">
+                                    </div>
+                                    <div class="form-group tm-form-group tm-form-group-1">                                    
+                                        <div class="form-group tm-form-group tm-form-group-pad tm-form-group-2">
+                                            <label for="inputRoom">Số phòng</label>
+                                            <select name="room" class="form-control tm-select" id="inputRoom">
+                                                <option value="1" selected>1 Room</option>
+                                                <option value="2">2 Rooms</option>
+                                                <option value="3">3 Rooms</option>
+                                                <option value="4">4 Rooms</option>
+                                                <option value="5">5 Rooms</option>
+                                                <option value="6">6 Rooms</option>
+                                                <option value="7">7 Rooms</option>
+                                                <option value="8">8 Rooms</option>
+                                                <option value="9">9 Rooms</option>
+                                                <option value="10">10 Rooms</option>
+                                            </select>                                        
+                                        </div>
+                                        <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">                                       
+                                            <label for="inputAdult">Người lớn</label>     
+                                            <select name="adult" class="form-control tm-select" id="inputAdult">
+                                                <option value="1" selected>1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>                                        
+                                        </div>
+                                        <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
+
+                                            <label for="inputChildren">Trẻ em</label>                                            
+                                            <select name="children" class="form-control tm-select" id="inputChildren">
+                                            	<option value="0" selected>0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                            </select>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row tm-search-form-row">
+
+                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
+                                        <label for="inputCheckIn">Ngày đến</label>
+                                        <input name="check-in" type="text" class="form-control" id="inputCheckIn" placeholder="Ngày đến">
+                                    </div>
+                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
+                                        <label for="inputCheckOut">Ngày về</label>
+                                        <input name="check-out" type="text" class="form-control" id="inputCheckOut" placeholder="Ngày về">
+                                    </div>
+                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
+                                        <label for="btnSubmit">&nbsp;</label>
+                                        <button type="submit" class="btn btn-primary tm-btn tm-btn-search text-uppercase" id="btnSubmit">Kiểm tra</button>
+                                    </div>
+                                </div>                              
+                            </form>                             
+
+                        </div>
+                        <div class="tm-banner-overlay"></div>
+                    </div>                 
+                </div>      
+            </section>
+
+            <section class="p-5 tm-container-outer tm-bg-gray">            
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 mx-auto tm-about-text-wrap text-center">                        
+                            <h2 class="text-uppercase mb-4"> <strong>Sự hài lòng của bạn</strong> là ưu tiên của chúng tôi</h2>                            
+                        </div>
+                    </div>
+                </div>              
+            </section>
+            
+            <div class="tm-container-outer" id="tm-section-2">
+                <section class="tm-slideshow-section">
+                    <div class="tm-slideshow">
+                        <img src="img/danang.jpeg" alt="Image">
+                        <img src="img/vinhhalong.jpeg" alt="Image">
+                        <img src="img/nhatrang.jpeg" alt="Image">    
+                    </div>
+                    <div class="tm-slideshow-description tm-bg-primary">
+                        <h2 class="">Những địa điểm du lịch Việt Nam nổi tiếng nhất định nên đến một lần</h2>
+                        <p>Điểm du lịch nào có nhiều cảnh quan đẹp, món ăn ngon, đáng đến nhất là điều mà nhiều du khách trong và ngoài nước quan tâm khi lên kế hoạch khám phá Việt Nam. Review những địa điểm du lịch nổi tiếng nhất đang thu hút đông đảo khách tham quan.</p>
+                        <a href="https://vinpearl.com/vi/20-dia-diem-du-lich-viet-nam-noi-tieng-nhat-dinh-nen-den-mot-lan" target="_blank" class="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Khám phá ngay</a>
+                    </div>
+                </section>
+                <section class="clearfix tm-slideshow-section tm-slideshow-section-reverse">
+
+                    <div class="tm-right tm-slideshow tm-slideshow-highlight">
+                        <img src="img/mientay1.jpeg" alt="Image">
+                        <img src="img/mientay2.jpeg" alt="Image">
+                        <img src="img/mientay3.jpeg" alt="Image">
+                    </div> 
+
+                    <div class="tm-slideshow-description tm-slideshow-description-left tm-bg-highlight">
+                        <h2 class="">Đến với miền Tây mến khách</h2>
+                        <p>Du lịch miền Tây nên đi tỉnh nào thì thú vị, có nhiều trải nghiệm đáng nhớ? Bài viết dưới đây sẽ giúp những ai đang có dự định du lịch các tỉnh miền Tây Nam Bộ nắm được những thông tin cần thiết, từ đó lên kế hoạch phù hợp ghé thăm miền "sông nước hữu tình" này.</p>
+                        <a href="https://vinpearl.com/vi/du-lich-mien-tay-nen-di-tinh-nao-goi-y-13-diem-den-hap-dan-nhat" target="_blank" class="text-uppercase tm-btn tm-btn-white tm-btn-white-highlight">Khám phá ngay</a>
+                    </div>                        
+
+                </section>
+                <section class="tm-slideshow-section">
+                    <div class="tm-slideshow">
+                        <img src="img/taynguyen1.jpeg" alt="Image">
+                        <img src="img/taynguyen2.jpeg" alt="Image">
+                        <img src="img/mientrung.jpeg" alt="Image">
+                    </div>
+                    <div class="tm-slideshow-description tm-bg-primary">
+                        <h2 class="">Miền Trung - Tây Nguyên, điểm đến lý tưởng cho những ngày hè đầy nắng</h2>
+                        <p>Bỏ lại sau lưng cái nắng chói chang của thành phố, du lịch đến với miền Trung - Tây Nguyên, bạn sẽ được bao bọc ngay bởi những làn gió biển mát rượi, nước biển xanh ngọc cùng những địa điểm lôi cuốn hấp dẫn khó tìm, tận hưởng hè này tại đây luôn bạn nhé!</p>
+                        <a href="https://travel.com.vn/tin-tuc-du-lich/mien-trung-tay-nguyen-diem-den-ly-tuong-cho-nhung-ngay-he-day-nang-v13859.aspx" target="_blank" class="text-uppercase tm-btn tm-btn-white tm-btn-white-primary">Khám Phá Ngay</a>
+                    </div>
+                </section>
+            </div>        
+            <div class="tm-container-outer" id="tm-section-3">
+                <ul class="nav nav-pills tm-tabs-links">
+                    <li class="tm-tab-link-li">
+                        <a href="#1a" data-toggle="tab" class="tm-tab-link">
+                            Vịnh Hạ Long
+                        </a>
+                    </li>
+                    <li class="tm-tab-link-li">
+                        <a href="#2a" data-toggle="tab" class="tm-tab-link">
+                            Hà Nội
+                        </a>
+                    </li>
+                    <li class="tm-tab-link-li">
+                        <a href="#3a" data-toggle="tab" class="tm-tab-link">
+                           Đà Lạt
+                        </a>
+                    </li>
+                    <li class="tm-tab-link-li">
+                        <a href="#4a" data-toggle="tab" class="tm-tab-link active"> 
+                            Nha Trang
+                        </a>
+                    </li>
+                    <li class="tm-tab-link-li">
+                        <a href="#5a" data-toggle="tab" class="tm-tab-link">
+                            Đà Nẵng
+                        </a>
+                    </li>
+                    <li class="tm-tab-link-li">
+                        <a href="#6a" data-toggle="tab" class="tm-tab-link">
+                            Phú Quốc
+                        </a>
+                    </li>
+                    <li class="tm-tab-link-li">
+                        <a href="#7a" data-toggle="tab" class="tm-tab-link">
+                            Sapa
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content clearfix">
+                	
+                 
+                    <div class="tab-pane fade" id="1a">
+                        <div class="tm-recommended-place-wrap">
+                            <div class="tm-recommended-place">
+                                <img src="img/vinhhalong1.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">[HẠ LONG] SEA PACKAGE - 3N2Đ phòng gồm bữa sáng + tặng 02 bữa trưa và xe đón tiễn Hà Nội</h3>
+                                    <p class="tm-text-highlight">Vịnh Hạ Long</p>
+                                    <p class="tm-text-gray">Vịnh Hạ Long - nơi sở hữu Di sản Thiên nhiên Thế giới do UNESCO công nhận với những cảnh đẹp trùng điệp của thiên nhiên, tạo hóa đã may mắn tặng cho dải đất hình chữ S.</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$110</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>                        
+                            </div>
+
+                            <div class="tm-recommended-place">
+                                <img src="img/vinhhalong2.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Tour Đi Vịnh Hạ Long Bằng Du Thuyền Sea Octopus</h3>
+                                    <p class="tm-text-highlight">Vịnh Hạ Long</p>
+                                    <p class="tm-text-gray">Tham quan Vịnh Hạ Long tuyến 2 trong vòng 6 tiếng, khởi hành buổi sáng từ 8 đến 14 giờ từ cảng tàu khách quốc tế Hạ Long. Đây là hành trình được đa số du khách đến Hạ Long lựa chọn khi đi tham quan Vịnh Hạ Long.</p>   
+                                </div>
+                                <div id="preload-hover-img"></div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$120</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>
+                            </div>
+                        </div>                        
+
+                    </div>
+                    
+                   
+                    <div class="tab-pane fade" id="2a">
+
+                        <div class="tm-recommended-place-wrap">
+                            <div class="tm-recommended-place">
+                                <img src="img/hanoi1.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Bay cùng Bamboo Airways | Hà Nội - Vịnh Hạ Long - Trải nghiệm bãi tắm nhân tạo SunWorld</h3>
+                                    <p class="tm-text-highlight">Hà Nội</p>
+                                    <p class="tm-text-gray">Du lịch Hạ Long là dịp để quý khách chiêm ngưỡng sự kì thú của thiên nhiên với những mỏm đá chênh vênh giữa biển như hòn Gà Chọi, hòn Trống Mái,.</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$220</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>                        
+                            </div>
+
+
+                            <div class="tm-recommended-place">
+                                <img src="img/hanoi2.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Hà Nội - Sapa - Bản Cát Cát - Fansipan - Ninh Bình - Tràng An</h3>
+                                    <p class="tm-text-highlight">Hà Nội</p>
+                                    <p class="tm-text-gray">Tiếp tục hành trình, xe khởi hành theo cao tốc Hà Nội – Lào Cai đưa Quý khách đến phố núi Sapa. Trên đường, Quý khách dùng cơm trưa tại nhà hàng địa phương..</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$250</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>
+                            </div>    
+                        </div>                        
+
+
+                    </div>    
+                    
+                       
+                    <div class="tab-pane fade" id="3a">
+
+                            <div class="tm-recommended-place">
+                                <img src="img/dalat1.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Đà Lạt -Thác Đamb’ri - Fairytale Land- Phân viện Sinh học - KDL Chuồn Chuồn (Tour Giá Sốc)</h3>
+                                    <p class="tm-text-highlight">Đà Lạt</p>
+                                    <p class="tm-text-gray">Đà Lạt thân thuộc nhưng cũng nhiều điều mới lạ, hấp dẫn. Ít ai nghĩ rằng, giữa thành phố ngàn hoa là Khu du lịch Kim Ngân Hills nổi bật với vườn thú khoảng 20 chủng loài hay khu Phim Trường Happy Hill </p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$350</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>
+                            </div>
+
+                            <div class="tm-recommended-place">
+                                <img src="img/dalat2.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Đà Lạt - Que Garden - Thác Bobla - Khu Du Lịch Kim Ngân Hills - Cà Phê Mê Linh (Tour Giá Sốc)</h3>
+                                    <p class="tm-text-highlight">Đà Lạt</p>
+                                    <p class="tm-text-gray">Đến với Đà Lạt, du khách không thể bỏ qua những điểm check-in nổi tiếng như: vườn thú kết hợp với không gian cà phê view rừng thông ấn tượng tại Kim Ngân Hills </p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$360</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>
+                            </div>    
+                        </div>                        
+    
+                    
+                 
+                    <div class="tab-pane fade show active" id="4a">
+             
+                        <div class="tm-recommended-place-wrap">
+                            <div class="tm-recommended-place">
+                                <img src="img/nhatrang1.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Đà Lạt - Nha Trang (Khách Sạn 3*&4*) (Tour Tiết Kiệm)</h3>
+                                    <p class="tm-text-highlight">Nha Trang</p>
+                                    <p class="tm-text-gray">Nha Trang với khí hậu ôn hòa, biển xanh trong quanh năm cùng những điểm vui chơi bậc nhất và không ngừng đổi mới hằng ngày luôn thu hút du khách gần xa..</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$440</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>                        
+                            </div>
+
+
+                            <div class="tm-recommended-place">
+                                <img src="img/nhatrang2.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Nha Trang - Làng Chài Xưa Mũi Né - Biển Nhũ Tiên - Vinwonders (Xe. Khách Sạn 4*. Tour Giá Sốc)</h3>
+                                    <p class="tm-text-highlight">Nha Trang, Mũi Né</p>
+                                    <p class="tm-text-gray">Nha Trang với khí hậu ôn hòa, biển xanh trong quanh năm cùng những điểm vui chơi bậc nhất và không ngừng đổi mới hằng ngày luôn thu hút du khách...</p>   
+                                </div>
+                                <a href="https://travel.com.vn/tourNDSGN612-044-060822XE-D-F/nha-trang-lang-chai-xua-mui-ne-bien-nhu-tien-vinwonders-xe-khach-san-4sao-tour-gia-soc-.aspx?LM=1" target="_blank" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$460</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>
+                            </div>
+
+                        
+                        </div>                        
+
+                    
+                    </div>
+                    
+                  
+                    <div class="tab-pane fade" id="5a">
+
+                        <div class="tm-recommended-place-wrap">
+                            <div class="tm-recommended-place">
+                                <img src="img/danang2.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Huế - La Vang - Động Phong Nha & Thiên Đường - KDL Bà Nà - Cầu Vàng -Sơn Trà - Hội An - Đà Nẵng</h3>
+                                    <p class="tm-text-highlight">Huế, Đà Nẵng</p>
+                                    <p class="tm-text-gray">Bán đảo Sơn Trà và viếng Chùa Linh Ứng: Nơi đây có tượng Phật Quan Thế Âm cao nhất Việt Nam, đứng nơi đây, Quý khách sẽ được chiêm ngưỡng toàn cảnh thành phố, núi rừng và biển đảo Sơn Trà một cách hoàn hảo nhất</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$550</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>                        
+                            </div>
+
+                            <div class="tm-recommended-place">
+                                <img src="img/danang1.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Đà Nẵng - Bà Nà - Cầu Vàng - Sơn Trà - Biển Mỹ Khê - Hội An - Đà Nẵng (Khách sạn 4* trọn tour)</h3>
+                                    <p class="tm-text-highlight">Đà Nẵng</p>
+                                    <p class="tm-text-gray">Khu du lịch Bà Nà (chi phí cáp treo & Ăn trưa tự túc): tận hưởng không khí se lạnh của Đà Lạt tại miền Trung, đoàn tự do tham quan Chùa Linh Ứng, Hầm Rượu Debay, vườn hoa Le Jardin D’Amour,</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$560</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>
+                            </div>
+  
+                        </div>                        
+
+                    </div>    
+                    
+         
+                    <div class="tab-pane fade" id="6a">
+
+                        <div class="tm-recommended-place-wrap">
+                            <div class="tm-recommended-place">
+                                <img src="img/phuquoc1.webp" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Phú Quốc - Vinpearl Oasis Resort - Thỏa Thích Vui Chơi Tại Vinwonders & Safari</h3>
+                                    <p class="tm-text-highlight">Vinpearl</p>
+                                    <p class="tm-text-gray">Quý khách tập trung tại sân bay Tân Sơn Nhất, ga đi Trong Nước. Hướng dẫn viên làm thủ tục cho Quý khách đáp chuyến bay đi Phú Quốc...</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$660</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>                        
+                            </div>
+
+                            <div class="tm-recommended-place">
+                                <img src="img/phuquoc2.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Phú Quốc - Thiên đường giải trí Vinwonder - Safari World - Hòn Thơm Nature Park</h3>
+                                    <p class="tm-text-highlight">Phú Quốc</p>
+                                    <p class="tm-text-gray">Dinh Cậu: biểu tượng văn hoá và tín ngưỡng của đảo Phú Quốc. Nơi ngư dân địa phương gởi gắm niềm tin cho một chuyến ra khơi đánh bắt đầy ắp cá khi trở về. Sau đó, đoàn viếng dinh Bà Thủy Long Thánh Mẫu</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$650</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>
+                            </div>
+
+                            <div class="tm-recommended-place">
+                                <img src="img/phuquoc3.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Long Xuyên - Hà Tiên - Phú Quốc – Dinh Cậu – Thiền Viện Trúc Lâm Hộ Quốc</h3>
+                                    <p class="tm-text-highlight">Hà Tiên, Phú Quốc</p>
+                                    <p class="tm-text-gray"> Trải nghiệm cáp treo 3 dây vượt biển dài nhất thế giới - 7.899.9m: với góc nhìn 360 độ, Quý khách sẽ có những khoảnh khắc tuyệt vời với bức tranh biển trời tại Nam đảo Phú Quốc.</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$640</p>
+                                    <p class="tm-recommended-price-link">Khám phá ngay</p>
+                                </a>
+                            </div>
+                        </div>                        
+                    </div>
+                    
+
+                    <div class="tab-pane fade" id="7a">
+                        <div class="tm-recommended-place-wrap">
+                            <div class="tm-recommended-place">
+                                <img src="img/sapa1.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Sapa - Bản Cát Cát - Fansipan - Ninh Bình - Tràng An - Bái Đính</h3>
+                                    <p class="tm-text-highlight">Sapa</p>
+                                    <p class="tm-text-gray">Lào Cai là tỉnh vùng cao phía Bắc Việt Nam. Lào Cai có những điểm văn hóa, phong cảnh lãng mạng, những điểm check-in nổi tiếng của giới trẻ như thung lũng Mường Hoa, đỉnh Phanxipang...</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$770</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>                        
+                            </div>
+
+                            <div class="tm-recommended-place">
+                                <img src="img/sapa2.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Sapa - Fansipan - Lai Châu - Trải nghiệm cầu kính đi bộ dài nhất thế giới</h3>
+                                    <p class="tm-text-highlight">Tây Bắc</p>
+                                    <p class="tm-text-gray">Điểm nhấn: - Chinh phục 3 trong 4 “Tứ đại đèo” vùng Đông Tây Bắc (đèo Khau Phạ, Ô Quy Hồ & Pha Đin) - Ruộng bậc thang Mù Cang Chải tuyệt đẹp vào mùa lúa chín (tháng 8-9)...</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$230</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>
+                            </div>
+
+                            <div class="tm-recommended-place">
+                                <img src="img/sapa3.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Đông Bắc: Hà Nội - Hà Giang - Lũng Cú - Đồng Văn - Mã Pí Lèng</h3>
+                                    <p class="tm-text-highlight">Đông Bắc</p>
+                                    <p class="tm-text-gray">Hành trình khám phá vòng cung Đông Bắc sẽ đưa du khách tham quan những điểm đến thú vị của cao nguyên Đá Đồng Văn, cột cờ Lũng Cú uy nghiêm...</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$140</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>
+                            </div>
+
+                            <div class="tm-recommended-place">
+                                <img src="img/sapa4.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                                <div class="tm-recommended-description-box">
+                                    <h3 class="tm-recommended-title">Sapa - Bản Cát Cát - Fansipan - Cổng Trời Ô Quy Hồ</h3>
+                                    <p class="tm-text-highlight">Bản Cát Cát</p>
+                                    <p class="tm-text-gray">Mường Hoa, đỉnh Phanxipang, núi Hàm Rồng, các bản văn hóa dân tộc như Cát Cát, Tả Van, Lào Chải, Tả Phìn và những con đường mòn..</p>   
+                                </div>
+                                <a href="#" class="tm-recommended-price-box">
+                                    <p class="tm-recommended-price">$190</p>
+                                    <p class="tm-recommended-price-link">Khám Phá Ngay</p>
+                                </a>
+                            </div>    
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+
+            <hr class="line">
+
+          <div class="tm-container-outer tm-position-relative" id="tm-section-4">
+            <div class="tm-recommended-place">
+                <img src="img/novotel.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                <div class="tm-recommended-description-box">
+                    <h3 class="tm-recommended-title">Novotel Saigon Center</h3>
+                    <p class="tm-text-highlight">Hồ Chí Minh</p>
+                    <p class="tm-text-gray">Tọa lạc tại Thành phố Hồ Chí Minh, cách Bảo tàng Mỹ thuật 1,8 km và Chợ ẩm thực đường phố Bến Thành 1,9 km, HOSTIE SAIGON [WANDERLUST Home] có quầy bar, sảnh khách</p>   
+                </div>
+                <a href="#" class="tm-recommended-price-box">
+                    <p class="tm-recommended-price">50$/Đêm</p>
+                    <p class="tm-recommended-price-link">Đặt phòng ngay</p>
+                </a>
+            </div>  
+            
+            <div class="tm-recommended-place">
+                <img src="img/hotel1.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                <div class="tm-recommended-description-box">
+                    <h3 class="tm-recommended-title">Fusion Suites Saigon</h3>
+                    <p class="tm-text-highlight">Hồ Chí Minh</p>
+                    <p class="tm-text-gray">Nằm trong bán kính 300 m từ Công viên Tao Đàn ở Quận 1, Fusion Suites Saigon cung cấp chỗ nghỉ hiện đại tại Thành phố Hồ Chí Minh nhộn nhịp. Khách sạn có quầy lễ tân 24 giờ, trung tâm thể dục và nhà hàng trong khuôn viên.</p>   
+                </div>
+                <a href="#" class="tm-recommended-price-box">
+                    <p class="tm-recommended-price">40$/Đêm</p>
+                    <p class="tm-recommended-price-link">Đặt phòng ngay</p>
+                </a>
+            </div>  
+
+            <div class="tm-recommended-place">
+                <img src="img/hotel2.jpeg" alt="Image" class="img-fluid tm-recommended-img">
+                <div class="tm-recommended-description-box">
+                    <h3 class="tm-recommended-title">Chez Mimosa Petite</h3>
+                    <p class="tm-text-highlight">Hồ Chí Minh</p>
+                    <p class="tm-text-gray">Phòng nghỉ gắn máy điều hòa tại khách sạn có bàn làm việc, ấm đun nước, minibar, két an toàn, TV màn hình phẳng và phòng tắm riêng với vòi xịt/chậu rửa vệ sinh. Tại Chez Mimosa Petite, các phòng được trang bị ga trải giường và khăn tắm.                   
+                        </p>   
+                </div>
+                <a href="#" class="tm-recommended-price-box">
+                    <p class="tm-recommended-price">48$/Đêm</p>
+                    <p class="tm-recommended-price-link">Đặt phòng ngay</p>
+                </a>
+            </div>  
+     </div>
+
+
+        <footer>
+            <p class="mb-0">Created by Pham Quynh - <span></span> My Social Media
+            <a href="https://www.facebook.com/pgbquynh" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.youtube.com/channel/UCY3vRY9Mt_8kAD2kAMpvKkA" target="_blank" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/baoquynhskc/" target="_blank" class="fa fa-instagram"></a>
+        </footer>
+    </div>
+    </div> 
+    <script src="js/jquery-1.11.3.min.js"></script>             
+    <script src="js/popper.min.js"></script>                   
+    <script src="js/bootstrap.min.js"></script>               
+    <script src="js/datepicker.min.js"></script>             
+    <script src="js/jquery.singlePageNav.min.js"></script>      
+    <script src="slick/slick.min.js"></script>                 
+    <script src="js/jquery.scrollTo.min.js"></script>          
+    <script> 
+
+        $(function(){
+
+            $(window).on("scroll", function() {
+                if($(window).scrollTop() > 100) {
+                    $(".tm-top-bar").addClass("active");
+                } else {                    
+                 $(".tm-top-bar").removeClass("active");
+                }
+            });
+
+
+            $('.tm-down-arrow-link').click(function(){
+                $.scrollTo('#tm-section-search', 300, {easing:'linear'});
+            });
+
+
+            var pickerCheckIn = datepicker('#inputCheckIn');
+            var pickerCheckOut = datepicker('#inputCheckOut');
+
+            $('#tm-top-bar').singlePageNav({
+                currentClass:'active',
+                offset: 60
+            });
+
+            $('.nav-link').click(function(){
+                $('#mainNav').removeClass('show');
+            });
+
+
+            $('.tm-slideshow').slick({
+                infinite: true,
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+
+ 
+        });
+
+    </script>             
+
+</body>
+</html>
